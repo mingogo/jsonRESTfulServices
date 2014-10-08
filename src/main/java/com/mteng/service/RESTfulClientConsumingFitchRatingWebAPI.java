@@ -4,15 +4,14 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import com.mteng.beans.PrettyPrints;
-import com.mteng.updated_JSON_VOs.*;
+import com.mteng.VO.fitchRatingWebAPI.MasterJSONBuilder;
 
 //TODO: Originize the project.
-//TODO: Copy the clean script to the project folder. 
-//TODO: Should feed the JSON built by MasterJSONbuilder. 
 public class RESTfulClientConsumingFitchRatingWebAPI {
 
 	PrettyPrints prettyPrints = new PrettyPrints();
-	MasterJsonObjectBuilder masterJsonObjectBuilder = new MasterJsonObjectBuilder();
+	// This reads the JSON built from JSONObjectBuilder. 
+	MasterJSONBuilder masterJsonObjectBuilder = new MasterJSONBuilder();
 
 	public static void main(String[] args){
 		RESTfulClientConsumingFitchRatingWebAPI rs = new

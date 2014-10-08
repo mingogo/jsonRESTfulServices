@@ -1,4 +1,4 @@
-package com.mteng.valueObject;
+package com.mteng.VO.dated;
 
 import java.util.ArrayList;
 import java.util.HashMap;

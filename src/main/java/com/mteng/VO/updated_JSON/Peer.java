@@ -1,4 +1,4 @@
-package com.mteng.updated_JSON_VOs;
+package com.mteng.VO.updated_JSON;
 
 public class Peer {
 

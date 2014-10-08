@@ -8,7 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import com.mteng.updated_JSON_VOs.MasterJsonObjectBuilder;
+import com.mteng.VO.updated_JSON.MasterJsonObjectBuilder;
 
 @Path("/sendbackjson")
 public class RESTfulServiceSendBackSameJSONasRequest {
