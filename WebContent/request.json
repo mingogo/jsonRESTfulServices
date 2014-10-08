@@ -1,0 +1,32 @@
+{
+  "operatingEnvironment": {
+    "factors": [
+      {
+        "id": 15,
+        "value": "Rating range High"
+      },
+      {
+        "id": 6,
+        "value": "Rating Range Low "
+      }
+    ],
+    "subFactors": [
+      {
+        "id": 12,
+        "value": "Ecomomic Environment",
+        "options": [
+          {
+            "id": 5,
+            "value": "Description",
+            "isSelected": true
+          },
+          {
+            "id": 3,
+            "value": "Description available",
+            "isSelected": false
+          }
+        ]
+      }
+    ]
+  }
+}
