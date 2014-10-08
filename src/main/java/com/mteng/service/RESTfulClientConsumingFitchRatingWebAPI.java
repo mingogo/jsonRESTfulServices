@@ -6,6 +6,7 @@ import com.sun.jersey.api.client.WebResource;
 import com.mteng.beans.PrettyPrints;
 import com.mteng.updated_JSON_VOs.*;
 
+//TODO: Should feed the JSON built by MasterJSONbuilder. 
 public class RESTfulClientConsumingFitchRatingWebAPI {
 
 	PrettyPrints prettyPrints = new PrettyPrints();
