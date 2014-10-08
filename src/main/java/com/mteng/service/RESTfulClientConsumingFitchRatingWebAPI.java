@@ -6,6 +6,8 @@ import com.sun.jersey.api.client.WebResource;
 import com.mteng.beans.PrettyPrints;
 import com.mteng.updated_JSON_VOs.*;
 
+//TODO: Originize the project.
+//TODO: Copy the clean script to the project folder. 
 //TODO: Should feed the JSON built by MasterJSONbuilder. 
 public class RESTfulClientConsumingFitchRatingWebAPI {
 
