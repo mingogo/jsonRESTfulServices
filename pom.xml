@@ -1,67 +1,78 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>ConvertJSON_to_or_fromPOJO</groupId>
-	<artifactId>ConvertJSON_to_or_fromPOJO</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+<!-- 	<groupId>ConvertJSON_to_or_fromPOJO</groupId>
+	<artifactId>ConvertJSON_to_or_fromPOJO</artifactId> -->
+	<groupId>jsonRESTfulServices</groupId>
+	<artifactId>jsonRESTfulServices</artifactId>
+ 	<version>0.0.1-SNAPSHOT</version> 
 	<packaging>war</packaging>
 
 	<build>
 		<plugins>
-			<!--<plugin>-->
-				<!--<groupId>org.jboss.as.plugins</groupId>-->
-				<!--<artifactId>jboss-as-maven-plugin</artifactId>-->
-				<!--<version>7.5.Final</version>-->
-				<!--<configuration>-->
-					<!--[><hostname>localhost</hostname><]-->
-					<!--[><port>8081</port><]-->
-					<!--[><name>jsonRESTfulServices.war</name><]-->
-					<!--<username>mteng</username>-->
-					<!--<password>Blue2014</password>-->
-				<!--</configuration>-->
-			<!--</plugin>-->
-			<plugin>            
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
 				<configuration>
-					<webXml>C:\Users\mteng\Desktop\workspace_git\jsonRESTfulServices\WebContent\WEB-INF\web.xml</webXml>        
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
-		</plugins>
-		<!--<plugins>-->
-			<!--[> for Maven deployment plugin <]-->
-			<!--<plugin>-->
-				<!--<groupId>org.apache.maven.plugins</groupId>-->
-				<!--<artifactId>maven-war-plugin</artifactId>-->
-				<!--<version>2.3</version>-->
-				<!--<configuration>-->
-					<!--<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>-->
-					<!--<warName>${plugin.war.warName}</warName>-->
-				<!--</configuration>-->
-			<!--</plugin>            -->
+	<!--<plugin> -->
+	<!--<groupId>org.jboss.as.plugins</groupId> -->
+	<!--<artifactId>jboss-as-maven-plugin</artifactId> -->
+	<!--<version>7.5.Final</version> -->
+	<!--<configuration> -->
+	<!--[><hostname>localhost</hostname><] -->
+	<!--[><port>8081</port><] -->
+	<!--[><name>jsonRESTfulServices.war</name><] -->
+	<!--<username>mteng</username> -->
+	<!--<password>Blue2014</password> -->
+	<!--</configuration> -->
+	<!--</plugin> -->
+<plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-war-plugin</artifactId>
+	<configuration>
+		<webXml>C:\Users\mteng\Desktop\workspace_git\jsonRESTfulServices\WebContent\WEB-INF\web.xml</webXml>
+	</configuration>
+</plugin>
+</plugins>
+	<!--<plugins> -->
+	<!--[> for Maven deployment plugin <] -->
+	<!--<plugin> -->
+	<!--<groupId>org.apache.maven.plugins</groupId> -->
+	<!--<artifactId>maven-war-plugin</artifactId> -->
+	<!--<version>2.3</version> -->
+	<!--<configuration> -->
+	<!--<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors> -->
+	<!--<warName>${plugin.war.warName}</warName> -->
+	<!--</configuration> -->
+	<!--</plugin> -->
 
-			<!--[> JBoss AS plugin to deploy the war. <]-->
-			<!--<plugin>-->
-				<!--<groupId>org.jboss.as.plugins</groupId>-->
-				<!--<artifactId>jboss-as-maven-plugin</artifactId>-->
-				<!--<version>7.4.Final</version>-->
-				<!--<configuration>-->
-					<!--<force>true</force>-->
-					<!--<hostname>${jboss-as.deploy.hostname}</hostname>-->
-					<!--<username>${jboss-as.deploy.user}</username>-->
-					<!--<password>${jboss-as.deploy.pass.prod}</password>-->
-					<!--[><fileNames><]-->
-						<!--[><fileName>target/${plugin.war.warName}.war</fileName><]-->
-					<!--[></fileNames><]-->
-				<!--</configuration>-->
-			<!--</plugin>-->
-			<!--<plugin>-->
-				<!--<groupId>org.jboss.as.plugins</groupId>-->
-				<!--<artifactId>jboss-as-maven-plugin</artifactId>-->
-				<!--<version>7.6.Final</version>-->
-			<!--</plugin>-->
-		<!--</plugins>-->
-	</build>
+	<!--[> JBoss AS plugin to deploy the war. <] -->
+	<!--<plugin> -->
+	<!--<groupId>org.jboss.as.plugins</groupId> -->
+	<!--<artifactId>jboss-as-maven-plugin</artifactId> -->
+	<!--<version>7.4.Final</version> -->
+	<!--<configuration> -->
+	<!--<force>true</force> -->
+	<!--<hostname>${jboss-as.deploy.hostname}</hostname> -->
+	<!--<username>${jboss-as.deploy.user}</username> -->
+	<!--<password>${jboss-as.deploy.pass.prod}</password> -->
+	<!--[><fileNames><] -->
+	<!--[><fileName>target/${plugin.war.warName}.war</fileName><] -->
+	<!--[></fileNames><] -->
+	<!--</configuration> -->
+	<!--</plugin> -->
+	<!--<plugin> -->
+	<!--<groupId>org.jboss.as.plugins</groupId> -->
+	<!--<artifactId>jboss-as-maven-plugin</artifactId> -->
+	<!--<version>7.6.Final</version> -->
+	<!--</plugin> -->
+	<!--</plugins> -->
+</build>
 
 	<!-- mteng -->
 	<!-- mteng -->
@@ -69,10 +80,9 @@
 	<!-- mteng -->
 	<!-- mteng -->
 	<properties>
-		<jboss-as.deploy.hostname>localhost</jboss-as.deploy.hostname>  <!-- Where to deploy. -->
-		<jboss-as.deploy.user>mteng</jboss-as.deploy.user>
-		<jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass>
-		<!--<plugin.war.warName>${project.build.finalName}</plugin.war.warName>-->
+		<!-- <jboss-as.deploy.hostname>localhost</jboss-as.deploy.hostname> Where 
+			to deploy. <jboss-as.deploy.user>mteng</jboss-as.deploy.user> <jboss-as.deploy.pass>${myproject.deploy.pass.prod}</jboss-as.deploy.pass> -->
+		<!--<plugin.war.warName>${project.build.finalName}</plugin.war.warName> -->
 		<spring.version>4.1.0.RELEASE</spring.version>
 	</properties>
 	<!-- mteng -->
@@ -80,11 +90,9 @@
 	<!-- mteng -->
 	<!-- mteng -->
 	<!-- mteng -->
-	<!--<properties>-->
-		<!-- 
-		<spring.version>3.0.5.RELEASE</spring.version>
-		 -->
-	<!--</properties>-->
+	<!--<properties> -->
+	<!-- <spring.version>3.0.5.RELEASE</spring.version> -->
+	<!--</properties> -->
 
 	<dependencies>
 
@@ -125,13 +133,8 @@
 			<version>2.2.4</version>
 		</dependency>
 		<!-- Jax-rs dependencies -->
-		<!-- 
-		<dependency>
-			<groupId>javax.ws.rs</groupId>
-			<artifactId>jsr311-api</artifactId>
-			<version>1.1.1</version>
-		</dependency>
-		 -->
+		<!-- <dependency> <groupId>javax.ws.rs</groupId> <artifactId>jsr311-api</artifactId> 
+			<version>1.1.1</version> </dependency> -->
 
 		<!-- Spring 3 dependencies -->
 		<dependency>
