@@ -10,7 +10,9 @@ public class RESTfulServiceHelloWorld{
 	@GET
 	public Response responseMsg() {
 
-		String output = "Hello World"; 
+		//String output = "Hello World"; 
+		//String output = " Hello World, I've done some changes. And another changes, yeah. "; 
+		String output = "Coming back to the church."; 
 		return Response.status(200).entity(output).build();
 	}
 }

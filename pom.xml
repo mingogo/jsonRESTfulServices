@@ -31,8 +31,9 @@
 					<force>true</force>
 					<hostname>${jboss-as.deploy.hostname}</hostname> 
 					<username>${jboss-as.deploy.user}</username> 
-					<password>${jboss-as.deploy.pass.prod}</password> -->
+					<password>${jboss-as.deploy.pass.prod}</password>
 					<hostname>localhost</hostname>
+					<port>9999</port>
 					<!-- 
 					<fileNames>
 						<fileName>target/${plugin.war.warName}.war</fileName>
