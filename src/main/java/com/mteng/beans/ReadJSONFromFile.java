@@ -34,9 +34,15 @@ public class ReadJSONFromFile {
 
 		JSONObject jsonObject = null;
 
+//		try {
+//			jsonObject = (JSONObject) parser.parse(new FileReader(jsonFileLocation));
+//		} catch (IOException | ParseException e) {
+//			e.printStackTrace();
+//		}
+
 		try {
 			jsonObject = (JSONObject) parser.parse(new FileReader(jsonFileLocation));
-		} catch (IOException | ParseException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
